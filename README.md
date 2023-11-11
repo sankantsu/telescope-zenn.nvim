@@ -6,7 +6,7 @@
 
 ## Feature
 
-- Markdown 上部の front matter で記載した記事タイトルを確認および検索しながら編集する記事を選択できます。
+- Slug と同時に記事タイトルを確認および対話的に検索しながら編集する記事を選択できます。
   - topics の文字列も検索対象となります。
 
 ## Install
@@ -47,7 +47,7 @@ vim.keymap.set('n', '<leader>fz', telescope.extensions.zenn.article_picker)
 Slug の表示幅を設定するオプションを用意しています。以下は、デフォルト相当の設定の記述方法
 
 ```lua
-telescope.setup({
+require("telescope").setup({
   extensions = {
     zenn = {
       slug_display_length = 7,
