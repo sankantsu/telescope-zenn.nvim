@@ -24,9 +24,6 @@ local entry_maker = function (opts)
   end
 
   return function (entry)
-    if entry == "" or string.match(entry, "^> .*") then
-      return nil
-    end
     local metadata = vim.json.decode(entry)
     return {
       value = metadata,
