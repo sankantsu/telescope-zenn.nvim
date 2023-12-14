@@ -46,8 +46,8 @@ M.make_finder = function (opts)
   }, {
     __call = function (self, ...)
       local cmd = { "npx", "zenn", "list:articles", "--format", "json" }
-      local finder = finders.new_oneshot_job(cmd, opts)
-      finder(...)
+      self._finder = finders.new_oneshot_job(cmd, opts)
+      self._finder(...)
     end
   })
 end
