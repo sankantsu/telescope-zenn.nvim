@@ -46,9 +46,9 @@ vim.keymap.set('n', '<leader>fz', telescope.extensions.zenn.article_picker)
 
 Zenn のプロジェクト内のファイル操作を行うためのカスタムアクションを定義しています。
 
-name   | description                | default mapping (normal mode)
--------|----------------------------|------------------------------
-create | "Create new empty article" | "c"
+name     | description    | default mapping (normal mode)
+---------|----------------|------------------------------
+`create` | 新規記事を作成 | `c`
 
 ## Optional settings
 
