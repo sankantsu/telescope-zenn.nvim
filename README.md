@@ -42,6 +42,14 @@ vim.keymap.set('n', '<leader>fz', telescope.extensions.zenn.article_picker)
 - Zenn と Github 連携している**レポジトリ内のルートディレクトリで nvim を起動する**ことが必要です。
   - 記事候補の作成に zenn-cli の機能を用いており、zenn-cli がプロジェクトのルートディレクトリ以外で期待する出力を返さないことによる制約です。
 
+## Actions
+
+Zenn のプロジェクト内のファイル操作を行うためのカスタムアクションを定義しています。
+
+name   | description                | default mapping (normal mode)
+-------|----------------------------|------------------------------
+create | "Create new empty article" | "c"
+
 ## Optional settings
 
 Slug の表示幅を設定するオプションを用意しています。以下は、デフォルト相当の設定の記述方法
