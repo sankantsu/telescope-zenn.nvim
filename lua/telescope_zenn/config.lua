@@ -5,6 +5,7 @@ local config = {}
 config.mappings = {
   ["n"] = {
     ["c"] = zenn_actions.create,
+    ["d"] = zenn_actions.delete,
   },
 }
 

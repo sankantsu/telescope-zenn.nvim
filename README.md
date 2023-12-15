@@ -49,6 +49,7 @@ Zenn のプロジェクト内のファイル操作を行うためのカスタム
 name     | description    | default mapping (normal mode)
 ---------|----------------|------------------------------
 `create` | 新規記事を作成 | `c`
+`delete` | 記事を削除     | `d`
 
 ## Optional settings
 

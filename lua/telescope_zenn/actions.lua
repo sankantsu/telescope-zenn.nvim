@@ -1,3 +1,4 @@
+local Path = require("plenary.path")
 local Job = require("plenary.job")
 local action_state = require("telescope.actions.state")
 
@@ -20,6 +21,24 @@ actions.create = function (prompt_bufnr)
   if path then
     local finder = current_picker.finder
     current_picker:refresh(finder)
+  end
+end
+
+actions.delete = function (prompt_bufnr)
+  local current_picker = action_state.get_current_picker(prompt_bufnr)
+  local entry = action_state.get_selected_entry()
+  if entry.path then
+    local path = Path:new(entry.path)
+    local prompt = string.format("Delete %s? [y/n]", path)
+    vim.ui.input({ prompt = prompt }, function (input)
+      if input == "y" then
+        path:rm()
+        local finder = current_picker.finder
+        current_picker:refresh(finder)
+      else
+        vim.notify("Deletion canceled.", vim.log.levels.INFO)
+      end
+    end)
   end
 end
 
