@@ -52,6 +52,4 @@ M.make_finder = function (opts)
   })
 end
 
-M.entry_maker = entry_maker
-
 return M
